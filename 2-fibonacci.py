@@ -32,7 +32,7 @@ def fib(pos):
             return n
 
         except ValueError:
-            pos = int(input('Insira um valor numérico maior ou igual a 0: '))
+            return 'Insira um valor numérico maior ou igual a 0!'
 
 test = fib(12)
 print(test)

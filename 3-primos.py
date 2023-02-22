@@ -40,7 +40,7 @@ def pri(p, all=[], n=2, count=0):
                 return all
 
         except ValueError:
-            p = int(input('Insira um valor numérico maior do que 1: '))
+            return 'Erro! Insira um valor numérico maior do que 1!'
 
 test = pri(100)  
 print(test)
