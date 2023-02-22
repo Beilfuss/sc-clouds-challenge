@@ -11,19 +11,36 @@
 
 def pri(p, all=[], n=2, count=0):
 
-    for i in range(1, p+1):
+    while True:
 
-        if n % i == 0:
-            count += 1
+        try:
 
-    if count == 2:
-        all.append(n)
+            if p < 1:
+                raise ValueError
 
-    if n != p:
-        n += 1
-        return pri(p, all, n)
-    else:
-        return all
+            i = 1
 
-test = pri(10)  
+            while i < p+1:
+                
+                if n % i == 0:
+                    count += 1
+                    
+                i += 1
+                
+                if count > 2:
+                    break
+                
+            if count == 2:
+                all.append(n)
+
+            if n != p:
+                n += 1
+                return pri(p, all, n)
+            else:
+                return all
+
+        except ValueError:
+            p = int(input('Insira um valor maior do que 1: '))
+
+test = pri(100)  
 print(test)
