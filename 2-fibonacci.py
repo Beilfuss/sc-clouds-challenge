@@ -10,19 +10,29 @@
 
 def fib(pos):
 
-    if pos == 0:
-        return 0
+    while True:
 
-    p = 0
-    n = 1
+        try:
 
-    for i in range(pos-1):
+            if pos < 0:
+                raise ValueError
 
-        t = n
-        n = p + n
-        p = t
+            if pos == 0:
+                return 0
 
-    return n
+            p = 0
+            n = 1
 
-test = fib(0)
+            for i in range(pos-1):
+
+                t = n
+                n = p + n
+                p = t
+
+            return n
+
+        except ValueError:
+            pos = int(input('Insira um valor maior ou igual a 0: '))
+
+test = fib(12)
 print(test)
