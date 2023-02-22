@@ -15,7 +15,7 @@ def pri(p, all=[]):
 
         try:
 
-            if type(p) != int or p < 1:
+            if type(p) != int or p < 2:
                 raise ValueError
 
             i = 1

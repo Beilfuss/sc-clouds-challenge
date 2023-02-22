@@ -15,7 +15,7 @@ def pri(p, all=[], n=2, count=0):
 
         try:
 
-            if type(p) != int or p < 1:
+            if type(p) != int or p < 2:
                 raise ValueError
 
             i = 1
@@ -42,5 +42,5 @@ def pri(p, all=[], n=2, count=0):
         except ValueError:
             return 'Erro! Insira um valor numérico maior do que 1!'
 
-test = pri(100)  
+test = pri(10)  
 print(test)
